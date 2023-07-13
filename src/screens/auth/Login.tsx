@@ -12,7 +12,7 @@ const Login = ({ navigation }: Props) => {
   const dispatch = useAppDispatch();
 
   function onSignUp() {
-    navigation.navigate("Login");
+    navigation.navigate("SignUp");
   }
   function onLoggedIn() {
     dispatch(setUser());
