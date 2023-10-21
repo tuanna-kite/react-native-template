@@ -6,6 +6,7 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import TabNav from "./TabNav";
 import ErrorOverlay from "../components/ErrorOverlay";
 import { useAppSelector } from "../store";
+import Chat from "../screens/Chat";
 
 const Stack = createNativeStackNavigator();
 
@@ -19,9 +20,11 @@ const Root = () => {
           screenOptions={{
             headerShown: false,
           }}
+          initialRouteName="Chat"
         >
+          <Stack.Screen name="Chat" component={Chat} />
           {!user && <Stack.Screen name="Auth" component={AuthStack} />}
-          {user && <Stack.Screen name="TabNav" component={TabNav} />}
+          {user && <Stack.Screen name="TabNav" component={TabNav} />} 
         </Stack.Navigator>
       </NavigationContainer>
     </>
