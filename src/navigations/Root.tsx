@@ -22,9 +22,8 @@ const Root = () => {
           }}
           initialRouteName="Chat"
         >
-          <Stack.Screen name="Chat" component={Chat} />
           {!user && <Stack.Screen name="Auth" component={AuthStack} />}
-          {user && <Stack.Screen name="TabNav" component={TabNav} />} 
+          {user && <Stack.Screen name="TabNav" component={TabNav} />}
         </Stack.Navigator>
       </NavigationContainer>
     </>

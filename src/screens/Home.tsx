@@ -8,7 +8,9 @@ const Home = () => {
   const dispatch = useAppDispatch();
   return (
     <Center flex={1}>
-      <Button onPress={() => dispatch(removeUser())}>Logout</Button>
+      <Button onPress={() => dispatch(removeUser())}>
+        Logout
+      </Button>
     </Center>
   );
 };
