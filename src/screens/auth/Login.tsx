@@ -22,16 +22,16 @@ const Login = ({ navigation }: Props) => {
   }
 
   useEffect(() => {
-    async function loadData() {
-      const citiesRef = collection(firebaseDB, "cities");
-      const querySnapshot = await getDocs(citiesRef);
-      querySnapshot.forEach((doc) => {
-        // doc.data() is never undefined for query doc snapshots
-        console.log(doc.id, " => ", doc.data());
-      });
-    }
+    // async function loadData() {
+    //   const citiesRef = collection(firebaseDB, "cities");
+    //   const querySnapshot = await getDocs(citiesRef);
+    //   querySnapshot.forEach((doc) => {
+    //     // doc.data() is never undefined for query doc snapshots
+    //     console.log(doc.id, " => ", doc.data());
+    //   });
+    // }
 
-    loadData(); // Fetch Data
+    // loadData(); // Fetch Data
   }, []);
 
   return (
